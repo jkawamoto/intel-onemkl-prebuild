@@ -1,0 +1,15 @@
+[package]
+name = "intel-onemkl-prebuild"
+version = "0.1.0"
+authors = ["Junpei Kawamoto <kawamoto.junpei@gmail.com>"]
+edition = "2021"
+
+[build-dependencies]
+ureq = "3"
+
+[features]
+default = ["ilp64", "sequential"]
+lp64 = []
+ilp64 = []
+openmp = []
+sequential = []
