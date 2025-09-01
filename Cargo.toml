@@ -2,7 +2,12 @@
 name = "intel-onemkl-prebuild"
 version = "0.1.0"
 authors = ["Junpei Kawamoto <kawamoto.junpei@gmail.com>"]
+categories = ["science"]
 edition = "2021"
+license = "MIT"
+repository = "https://github.com/jkawamoto/intel-onemkl-prebuild"
+description = "Set up Intel oneAPI Math Kernel Library (oneMKL)"
+links = "mkl"
 
 [build-dependencies]
 ureq = "3"

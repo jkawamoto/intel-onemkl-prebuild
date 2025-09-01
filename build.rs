@@ -54,7 +54,7 @@ fn main() {
         let mut cmd = Command::new("sh");
         cmd.current_dir(&out_dir);
         cmd.args(&installation_args);
-        cmd.env("HOME", out_dir);
+        cmd.env("HOME", &out_dir);
         let status = cmd.status().expect("Failed to run MKL installer");
         assert!(
             status.success(),
@@ -75,4 +75,6 @@ fn main() {
         println!("cargo:rustc-link-lib=static=mkl_sequential");
     }
     println!("cargo:rustc-link-lib=static=mkl_core");
+    println!("cargo:rustc-link-lib=mkl_rt");
+    println!("cargo::metadata=ROOT={}", out_dir.join("mkl/latest").display());
 }
