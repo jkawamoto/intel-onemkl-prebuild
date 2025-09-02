@@ -15,6 +15,9 @@ const LINUX_INSTALLER_URL: &str = "https://registrationcenter-download.intel.com
 
 fn main() {
     println!("cargo:rerun-if-changed=build.rs");
+    if env::var("DOCS_RS").is_ok() {
+        return;
+    }
 
     let out_dir = PathBuf::from(env::var("OUT_DIR").unwrap());
     let lib_dir = if cfg!(target_os = "macos") {

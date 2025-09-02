@@ -3,6 +3,7 @@ name = "intel-onemkl-prebuild"
 version = "0.1.0"
 authors = ["Junpei Kawamoto <kawamoto.junpei@gmail.com>"]
 categories = ["science"]
+documentation = "https://docs.rs/intel-onemkl-prebuild"
 edition = "2021"
 keywords = ["fft", "blas", "lapack"]
 license = "MIT"

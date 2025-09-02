@@ -1,5 +1,7 @@
 # intel-onemkl-prebuild
 
+[![Latest version](https://img.shields.io/crates/v/intel-onemkl-prebuild.svg)](https://crates.io/crates/intel-onemkl-prebuild)
+[![docs.rs](https://img.shields.io/docsrs/intel-onemkl-prebuild)](https://docs.rs/intel-onemkl-prebuild)
 [![GitHub License](https://img.shields.io/github/license/jkawamoto/intel-onemkl-prebuild)](https://github.com/jkawamoto/intel-onemkl-prebuild/blob/main/LICENSE)
 [![Build](https://github.com/jkawamoto/intel-onemkl-prebuild/actions/workflows/build.yaml/badge.svg)](https://github.com/jkawamoto/intel-onemkl-prebuild/actions/workflows/build.yaml)
 
