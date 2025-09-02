@@ -5,9 +5,9 @@ authors = ["Junpei Kawamoto <kawamoto.junpei@gmail.com>"]
 categories = ["science"]
 edition = "2021"
 license = "MIT"
+links = "mkl"
 repository = "https://github.com/jkawamoto/intel-onemkl-prebuild"
 description = "Set up Intel oneAPI Math Kernel Library (oneMKL)"
-links = "mkl"
 
 [build-dependencies]
 ureq = "3"
