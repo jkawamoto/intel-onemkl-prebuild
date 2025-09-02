@@ -1,5 +1,8 @@
 # intel-onemkl-prebuild
 
+[![GitHub License](https://img.shields.io/github/license/jkawamoto/intel-onemkl-prebuild)](https://github.com/jkawamoto/intel-onemkl-prebuild/blob/main/LICENSE)
+[![Build](https://github.com/jkawamoto/intel-onemkl-prebuild/actions/workflows/build.yaml/badge.svg)](https://github.com/jkawamoto/intel-onemkl-prebuild/actions/workflows/build.yaml)
+
 `intel-onemkl-prebuild` is a Rust crate that automatically sets up and links the
 [Intel oneAPI Math Kernel Library (oneMKL)](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html).
 It downloads and installs the prebuilt oneMKL binaries, and exposes them to your Rust project.
