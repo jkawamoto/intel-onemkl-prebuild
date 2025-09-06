@@ -1,0 +1,14 @@
+[tool.bumpversion]
+current_version = "0.1.1"
+tag = false
+commit = true
+
+[[tool.bumpversion.files]]
+filename = "Cargo.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "README.md"
+search = 'intel-onemkl-prebuild = "{current_version}"'
+replace = 'intel-onemkl-prebuild = "{new_version}"'
