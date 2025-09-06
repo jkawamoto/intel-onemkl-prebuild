@@ -5,6 +5,7 @@ authors = ["Junpei Kawamoto <kawamoto.junpei@gmail.com>"]
 categories = ["science"]
 documentation = "https://docs.rs/intel-onemkl-prebuild"
 edition = "2021"
+exclude = [".*"]
 keywords = ["fft", "blas", "lapack"]
 license = "MIT"
 links = "mkl"
