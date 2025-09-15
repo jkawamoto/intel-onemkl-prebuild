@@ -6,4 +6,5 @@
 //
 // http://opensource.org/licenses/mit-license.php
 
+#![doc = include_str!("../README.md")]
 #![no_std]

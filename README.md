@@ -36,6 +36,7 @@ You can control the integer size and threading model via Cargo features:
 - `lp64` — use the 32-bit integer interface.
 - `openmp` — use the Intel OpenMP runtime.
 - `sequential` — use sequential (single-threaded) execution.
+- `system` - use locally installed MKL libraries on your system instead of downloading and installing new ones.
 
 Default features are: `ilp64` and `sequential`.
 

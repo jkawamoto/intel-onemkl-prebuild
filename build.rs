@@ -13,6 +13,39 @@ use std::{env, fs, io};
 const NUGET_PACKAGE_ID: &str = "intelmkl.static.win-x64";
 const LINUX_INSTALLER_URL: &str = "https://registrationcenter-download.intel.com/akdlm/IRC_NAS/47c7d946-fca1-441a-b0df-b094e3f045ea/intel-onemkl-2025.2.0.629.sh";
 
+#[cfg(feature = "system")]
+fn main() {
+    use intel_mkl_tool::{Config, Library};
+    use std::str::FromStr;
+
+    println!("cargo:rerun-if-changed=build.rs");
+    println!("cargo:rerun-if-env-changed=MKLROOT");
+
+    let cfg = Config::from_str(
+        format!(
+            "mkl-static-{}-{}",
+            if cfg!(feature = "lp64") {
+                "lp64"
+            } else {
+                "ilp64"
+            },
+            if cfg!(feature = "openmp") {
+                "iomp"
+            } else {
+                "seq"
+            }
+        )
+        .as_str(),
+    )
+    .unwrap();
+
+    let lib = Library::new(cfg).unwrap();
+    lib.print_cargo_metadata().unwrap();
+    println!("cargo::metadata=INCLUDE_PATH={}", lib.include_dir.display());
+    println!("cargo::metadata=LIBRARY_PATH={}", lib.library_dir.display());
+}
+
+#[cfg(not(feature = "system"))]
 fn main() {
     println!("cargo:rerun-if-changed=build.rs");
     if env::var("DOCS_RS").is_ok() {
@@ -104,4 +137,9 @@ fn main() {
         "cargo::metadata=ROOT={}",
         lib_dir.parent().unwrap().display()
     );
+    println!(
+        "cargo::metadata=INCLUDE_PATH={}",
+        lib_dir.join("include").display()
+    );
+    println!("cargo::metadata=LIBRARY_PATH={}", lib_dir.display());
 }
