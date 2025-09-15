@@ -14,6 +14,7 @@ description = "Set up Intel oneAPI Math Kernel Library (oneMKL)"
 
 [build-dependencies]
 ureq = "3"
+intel-mkl-tool = { version = "0.8", optional = true }
 
 [features]
 default = ["ilp64", "sequential"]
@@ -21,3 +22,4 @@ lp64 = []
 ilp64 = []
 openmp = []
 sequential = []
+system = ["dep:intel-mkl-tool"]
