@@ -22,7 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        feature: ["ilp64,sequential", "lp64,sequential"]
+        feature: ["ilp64", "lp64"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -30,4 +30,4 @@ jobs:
         with:
           key: ${{ matrix.feature }}
       - name: Build
-        run: cargo build -vv --no-default-features -F "${{ matrix.feature }}"
+        run: cargo build -vv --no-default-features -F "${{ matrix.feature }},sequential"
