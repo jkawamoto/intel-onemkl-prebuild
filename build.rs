@@ -1,6 +1,6 @@
 // build.rs
 //
-// Copyright (c) 2025 Junpei Kawamoto
+// Copyright (c) 2025-2026 Junpei Kawamoto
 //
 // This software is released under the MIT License.
 //
@@ -11,7 +11,7 @@ use std::process::Command;
 use std::{env, fs, io};
 
 const NUGET_PACKAGE_ID: &str = "intelmkl.static.win-x64";
-const LINUX_INSTALLER_URL: &str = "https://registrationcenter-download.intel.com/akdlm/IRC_NAS/47c7d946-fca1-441a-b0df-b094e3f045ea/intel-onemkl-2025.2.0.629.sh";
+const LINUX_INSTALLER_URL: &str = "https://registrationcenter-download.intel.com/akdlm/IRC_NAS/17f37e16-768e-40d2-bcf8-c252dc6c5499/intel-onemkl-2026.1.0.237_offline.sh";
 
 #[cfg(feature = "system")]
 fn main() {
