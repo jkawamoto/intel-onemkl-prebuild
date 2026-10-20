@@ -11,6 +11,7 @@ use std::process::Command;
 use std::{env, fs, io};
 
 const NUGET_PACKAGE_ID: &str = "intelmkl.static.win-x64";
+const NUGET_PACKAGE_VERSION: &str = "2026.1.0.226";
 const LINUX_INSTALLER_URL: &str = "https://registrationcenter-download.intel.com/akdlm/IRC_NAS/17f37e16-768e-40d2-bcf8-c252dc6c5499/intel-onemkl-2026.1.0.237_offline.sh";
 
 #[cfg(feature = "system")]
@@ -62,6 +63,8 @@ fn main() {
                 .args([
                     "install",
                     NUGET_PACKAGE_ID,
+                    "-Version",
+                    NUGET_PACKAGE_VERSION,
                     "-OutputDirectory",
                     &out_dir.to_str().unwrap(),
                     "-DirectDownload",
