@@ -15,7 +15,7 @@ Add this crate to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-intel-onemkl-prebuild = "0.2.1"
+intel-onemkl-prebuild = "0.2.2"
 ```
 
 Then add the extern declaration to your `main.rs` or `lib.rs` to ensure the libraries are properly linked:
